@@ -17,8 +17,11 @@ session_start();
         <div class="row">
             <div class="col">
                 <h1>Welcome to bank</h1>
-
-                <a href="login.php">Login</a> or <a href="register.php">Registration</a>
+                <div>
+                    <a href="http://localhost/BIT-backend/bank/login.php">Login</a> 
+                    or
+                    <a href="http://localhost/BIT-backend/bank/register.php">Registration</a>
+                </div>
             </div>
         </div>
     </div>
