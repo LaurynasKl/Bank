@@ -22,6 +22,8 @@ $accounts[] = [
 
 file_put_contents(__DIR__. '/data/accounts.ser', serialize($accounts));
 
+$_SESSION['succes'] = "New account created";
+
 header('Location: http://localhost/BIT-backend/bank/myAccounts.php');
 
 

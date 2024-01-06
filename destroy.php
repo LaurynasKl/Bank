@@ -16,6 +16,8 @@ foreach ($accounts as $index => $account) {
 
 file_put_contents(__DIR__ . '/data/accounts.ser', serialize($accounts));
 
+$_SESSION['succes'] = "You deleted $accountUrl";
+
 header('Location: http://localhost/BIT-backend/bank/myAccounts.php');
 
 ?>

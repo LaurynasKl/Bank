@@ -22,8 +22,11 @@ foreach ($accounts as $index => $account) {
         break;
     }
 }
+$eur = $_POST['eur'];
 
 
 file_put_contents(__DIR__. '/data/accounts.ser', serialize($accounts));
+
+$_SESSION['succes'] = "You added $eur eur";
 
 header('Location: http://localhost/BIT-backend/bank/myAccounts.php');

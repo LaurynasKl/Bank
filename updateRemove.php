@@ -26,7 +26,10 @@ foreach ($accounts as $index => $account) {
     }
 }
 
+$eur = $_POST['eur'];
 
 file_put_contents(__DIR__. '/data/accounts.ser', serialize($accounts));
+
+$_SESSION['succes'] = "You removed $eur eur";
 
 header('Location: http://localhost/BIT-backend/bank/myAccounts.php');

@@ -14,6 +14,7 @@ session_start();
 <body>
 
     <?php require __DIR__ . '/parts/nav.php'; ?>
+    <?php require __DIR__. '/parts/msg.php' ?>
 
     <?php
     $accounts = file_get_contents(__DIR__ . '/data/accounts.ser');
