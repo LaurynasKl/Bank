@@ -12,7 +12,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             exit;
         }
         if (strlen($_POST['name']) < 3 ) {
-            $_SESSION['errorName'] = 'Vardas per trumpas';
+            $_SESSION['errorName'] = 'Your name is to short';
+            header('Location: http://localhost/BIT-backend/bank/register.php');
+            exit;
+        }
+        if (strlen($_POST['lastName']) < 3 ) {
+            $_SESSION['errorLastName'] = 'Your last name is to short';
             header('Location: http://localhost/BIT-backend/bank/register.php');
             exit;
         }
@@ -37,6 +42,10 @@ if (isset($_SESSION['errorName'])) {
     $errorName = $_SESSION['errorName'];
     unset($_SESSION['errorName']);
 }
+if (isset($_SESSION['errorLastName'])) {
+    $errorLastName = $_SESSION['errorLastName'];
+    unset($_SESSION['errorLastName']);
+}
 
 ?>
 <!DOCTYPE html>
@@ -60,9 +69,13 @@ if (isset($_SESSION['errorName'])) {
                 <?php if (isset($error)) : ?>
                     <h1 style="color: crimson"><?= $error ?></h1>
                 <?php endif ?>
-                
-                <?php if (isset($errorName)) : ?>
+
+                <?php if (isset($errorName)): ?>
                     <h1 style="color: crimson"><?= $errorName ?></h1>
+                <?php endif ?>
+
+                <?php if (isset($errorLastName)): ?>
+                    <h1 style="color: crimson"><?= $errorLastName ?></h1>
                 <?php endif ?>
 
                 <h1>Welcome to bank</h1>
