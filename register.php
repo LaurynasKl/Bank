@@ -11,6 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header('Location: http://localhost/BIT-backend/bank/register.php');
             exit;
         }
+        if (strlen($_POST['name']) < 3 ) {
+            $_SESSION['errorName'] = 'Vardas per trumpas';
+            header('Location: http://localhost/BIT-backend/bank/register.php');
+            exit;
+        }
     }
     $user = [
         'name' => $_POST['name'],
@@ -21,12 +26,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $users[] = $user;
     file_put_contents(__DIR__ . '/data/users.ser', serialize($users));
-    header('Location: http://localhost/BIT-backend/tasks/bankas/login.php');
+    header('Location: http://localhost/BIT-backend/bank/login.php');
     exit;
 }
 if (isset($_SESSION['error'])) {
     $error = $_SESSION['error'];
     unset($_SESSION['error']);
+}
+if (isset($_SESSION['errorName'])) {
+    $errorName = $_SESSION['errorName'];
+    unset($_SESSION['errorName']);
 }
 
 ?>
@@ -50,6 +59,10 @@ if (isset($_SESSION['error'])) {
 
                 <?php if (isset($error)) : ?>
                     <h1 style="color: crimson"><?= $error ?></h1>
+                <?php endif ?>
+                
+                <?php if (isset($errorName)) : ?>
+                    <h1 style="color: crimson"><?= $errorName ?></h1>
                 <?php endif ?>
 
                 <h1>Welcome to bank</h1>
