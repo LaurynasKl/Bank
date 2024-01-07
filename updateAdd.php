@@ -17,7 +17,7 @@ $accounts = unserialize($accounts);
 
 foreach ($accounts as $index => $account) {
     if ($account['account'] == $accountUrl) {
-        $account['eur'] = $account['eur'] + (int)$_POST['eur'];
+        $account['eur'] = $account['eur'] + (float)$_POST['eur'];
         $accounts[$index] = $account;
         break;
     }
