@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <title>edit</title>
+    <title>remove</title>
 </head>
 
 <body>
@@ -29,13 +29,13 @@
         }
     }
     ?>
-    <?php print_r($acc['eur']); ?>
 
-    <?php if ($acc['eur'] < 0) : ?>
+    <!-- <?php if ($acc['eur'] < 0) : ?>
         <div>Blogai</div>
         <a href="http://localhost/BIT-backend/bank/myAccounts.php">Back</a>
 
-    <?php else : ?>
+    <?php else : ?> -->
+
         <?php if (!$acc) : ?>
             <div>Saskaita nerasta</div>
             <a href="http://localhost/BIT-backend/bank/myAccounts.php">Back</a>
@@ -51,7 +51,8 @@
             </form>
 
         <?php endif ?>
-    <?php endif ?>
+        
+    <!-- <?php endif ?> -->
 
 
 </body>
