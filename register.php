@@ -55,7 +55,7 @@ if (isset($_SESSION['errorLastName'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <title>Create Account</title>
+    <title>Registration</title>
 </head>
 
 <body>
@@ -83,7 +83,7 @@ if (isset($_SESSION['errorLastName'])) {
                     <input type="text" name="name" placeholder="Name">
                     <input type="text" name="lastName" placeholder="Last name">
                     <input type="text" name="code" placeholder="Personal code">
-                    <input type="text" name="password" placeholder="Password">
+                    <input type="password" name="password" placeholder="Password">
                     <button type="submit">Registration</button>
                     <p class="mt-2"><b>If you have account, log in <a href="http://localhost/BIT-backend/bank/login.php">here</a></b></p>
                 </form>

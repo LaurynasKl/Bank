@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <h1>Welcome to bank</h1>
                 <form action="" method="post">
                     <input type="text" name="code" placeholder="Personal Code">
-                    <input type="text" name="password" placeholder="Password">
+                    <input type="password" name="password" placeholder="Password">
                     <button type="submit">Login</button>
                 </form>
                 <p class="mt-2"><b>If you don't have account, you can register <a href="http://localhost/BIT-backend/bank/register.php">here</a></b></p>
