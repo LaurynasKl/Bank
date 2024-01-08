@@ -38,7 +38,6 @@ session_start();
                 <div class="row">
                     <div class="col-5"><b> Accounts </b></div>
                     <div class="col-2"><b> EUR </b></div>
-                    <div class="col-2"><b> Action </b></div>
                 </div>
             </div>
         </li>
