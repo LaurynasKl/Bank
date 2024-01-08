@@ -37,7 +37,7 @@ session_start();
             <div class="container">
                 <div class="row">
                     <div class="col-5"><b> Accounts </b></div>
-                    <div class="col-2"><b> EUR </b></div>
+                    <div class="col-2"><b> Limit </b></div>
                 </div>
             </div>
         </li>
@@ -64,7 +64,7 @@ session_start();
                 <div class="container">
                     <div class="row">
                         <div class="col-5"> <?= $account['account'] ?></div>
-                        <div class="col-2"> <?= $account['eur'] ?></div>
+                        <div class="col-2"> <?= $account['eur'] ?> eur</div>
                         <div class="col-2">
                             <a href="http://localhost/BIT-backend/bank/show.php?account=<?= $account['account'] ?>">Show</a>
                         </div>
